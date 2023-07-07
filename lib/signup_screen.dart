@@ -1,8 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 import 'package:login_signup/login_screen.dart';
-import 'package:login_signup/utils.dart';
 import 'round_button.dart';
 
 class SignupScreen extends StatefulWidget {
@@ -125,13 +123,15 @@ class _SignupScreenState extends State<SignupScreen> {
         loading = false; // it holds to show circular indicator when creat user
       });
 
-      Fluttertoast.showToast(
-        msg: error.toString(),
-        toastLength: Toast.LENGTH_SHORT,
-        gravity: ToastGravity.CENTER,
-        timeInSecForIosWeb: 1,
-        backgroundColor: Colors.red,
-        textColor: Colors.white,
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(
+            error.toString(),
+            style: TextStyle(color: Colors.red),
+          ),
+          backgroundColor: Colors.black,
+          duration: Duration(seconds: 2),
+        ),
       );
     });
   } //to get error when field is empty
