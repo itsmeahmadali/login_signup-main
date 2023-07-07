@@ -125,10 +125,13 @@ class _SignupScreenState extends State<SignupScreen> {
         loading = false; // it holds to show circular indicator when creat user
       });
 
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text(error.toString()),
-        ),
+      Fluttertoast.showToast(
+        msg: error.toString(),
+        toastLength: Toast.LENGTH_SHORT,
+        gravity: ToastGravity.CENTER,
+        timeInSecForIosWeb: 1,
+        backgroundColor: Colors.red,
+        textColor: Colors.white,
       );
     });
   } //to get error when field is empty
