@@ -125,17 +125,11 @@ class _SignupScreenState extends State<SignupScreen> {
         loading = false; // it holds to show circular indicator when creat user
       });
 
-      utils().toastMessage(error.toString());
-      toastMessage() {
-        Fluttertoast.showToast(
-            msg: 'Hii World',
-            toastLength: Toast.LENGTH_SHORT,
-            gravity: ToastGravity.BOTTOM,
-            timeInSecForIosWeb: 1,
-            backgroundColor: Colors.red,
-            textColor: Colors.white,
-            fontSize: 16.0);
-      }
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(error.toString()),
+        ),
+      );
     });
   } //to get error when field is empty
 }
