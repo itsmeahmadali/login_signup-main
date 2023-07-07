@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "475876471715",
+    "project_id": "dumy-e4597",
+    "storage_bucket": "dumy-e4597.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:475876471715:android:2d002ab163e202b47fa016",
+        "android_client_info": {
+          "package_name": "com.login_signup.dumy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "475876471715-qios9bdjadc72s6g7mlbr8idl2vqso6m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJO0MXNz98jPfGXAmTLU3p685ABvrGd94"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "475876471715-qios9bdjadc72s6g7mlbr8idl2vqso6m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
